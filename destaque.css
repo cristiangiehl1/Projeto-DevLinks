@@ -42,7 +42,7 @@ body {
         background: color image repeat position cover
     */
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    height: 100%;
 }
 
 body * {
@@ -97,6 +97,8 @@ body * {
             contrário ele estaria indo para as extremidades da página.
     */
     position: relative;
+    top: 5px;
+    
     width: 64px;
 
     margin: 4px auto;
@@ -150,7 +152,6 @@ body * {
     
 }
 
-
 /* Links */
 ul {
     list-style: none;
@@ -160,6 +161,51 @@ ul {
     gap: 16px;
 
     padding: 24px 0;
+}
+
+ul li {
+    display: flex;    
+    justify-content: center;
+}
+
+ul li img {     
+    /* 
+        a propriedade 'gap' é aplicavel quando utilizamos o 'display: flex'
+            ele coloca espaço entre os elementos flex.
+        a propriedade 'align-items: center' coloca todos os itens 
+            centralizados horizontalmente (eixo x).
+        a propredade 'justify-content: center' coloca todos os itens
+            centralizados verticalmente (eixo y).  
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    
+    /* 
+        -webkit- é um prefixo que alguns browsers vão utilizar 
+            para poder aplicar a propriedade. 
+    */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+    width: 100%;    
+}
+
+
+/* ':hover' = pseudo-selector */
+ul li img:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
 
 ul li a {     
@@ -198,6 +244,12 @@ ul li a {
 ul li a:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
+}
+
+.nav {    
+    display: flex;
+    justify-content: flex-start;
+    
 }
 
 ul li ion-icon {

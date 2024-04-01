@@ -7,47 +7,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevLinks</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./destaque.css">
 </head>
 <body>    
     <div id="container">
-        <div id="profile">
-            <!--
-                o alt="" serve para descrever o que irá aparecer caso a 
-                    imagem não possa ser carregada.
-            -->
-            <img src="assets/avatar.png" alt="Foto de Cristian Giehl sério, 
-            usando óculos e camisa social com suéter cinza, 
-            barba e fundo branco">
-            <p>@cristian.giehl - creci:</p>
-        </div>
-
         <div id="switch" onclick="toggleMode()">
             <button></button>
             <span></span>
         </div>
-        <div>
+        <div id="destaques">
             <ul>
-                <li>
-                    <a href="https://www.ebcimobiliaria.com.br/" target="_blank">Conheça nossa porfolio completo</a>
+                <li class="nav">
+                    <a href="index.html" target="_self">Página inicial</a>
                 </li>
 
                 <li>
-                    <a href="destaques.html" target="_self">Conheça os imóveis em destaque</a>
+                    <img src="assets/destaque2.jpeg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/destaque5.jpeg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/destaque6.jpeg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/destaque4.jpeg" alt="">
                 </li>
 
                 <li>
                     <a aria-label="Chat on WhatsApp" 
-                    href="https://wa.me/5547991115903?text=Gostaria%20de%20agendar%20uma%20reunião%20para%20falarmos%20sobre%20as%20oportunidades%20da%20região!" 
+                    href="https://wa.me/5547991115903?text=Gostaria%20de%20agendar%20uma%20reunião%20para%20falarmos%20sobre%20os%20destaques%20da%20do%20seu%20portifólio!" 
                     target="_blank">Entre em contato conosco
                     <ion-icon name="logo-whatsapp" id="whats"></ion-icon>
                     </a>
-                </li>
-
-                <li>
-                    <a href="https://rocketseat.com.br/explorer" 
-                    target="_blank"
-                    >Conheça o Explorer</a>
                 </li>
             </ul>
         </div>
