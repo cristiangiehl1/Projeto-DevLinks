@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color:  rgba(255, 255, 255, 0.2); 
+    --switch-bg-url: url(./assets/moon-stars.svg) 
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);    
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg)
+}
+
+body {
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */         
+    /* 
+        A opção 'cover' faz com que a imagem cubra 
+            todo a área visível.
+    */
+
+    /* 
+        É possível simplicar o código em uma única linha de comando
+            utilizando um shorthand (atalho).
+        background: color image repeat position cover
+    */
+    background: var(--bg-url) no-repeat top 
+    center/cover;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+#container {    
+    /* 
+        Para centralizar uma caixa que tem uma largura fixa devemos usar a
+            configuração de margin: auto.
+    */
+    width: 360px;    
+    margin: 56px auto 0px;
+    padding: 0px 24px;
+}
+
+/* Profile */
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    /* 
+        Não conseguimos aplicar margin: auto em elementos com display: inline
+        Temos as configurações de display: none, block e inline.
+        O 'display: block' faz com que o conteiner pegue toda a largura da tela.
+        <img> <a> são elementos inline.
+        <div> é elemento block.
+        a solução que podemos aplicar é transformar o elemento em 'display: block' 
+            OU colocar no elemento pai a config. 'text-align: center' que centraliza
+            todos os elementos filhos que são 'display: inline'.
+    */
+    width: 112px;        
+}
+
+#profile p {
+    font-weight: 500;    
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* Switch */
+
+#switch {
+    /* 
+        Usamos 'position: relative' no elemento pai quando queremos que
+            os elementos filhos com position absolute ficam delimitados
+            pela box-model (width e height) do elemento pai, caso 
+            contrário ele estaria indo para as extremidades da página.
+    */
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;    
+    top: 50%;
+    left: 0;
+
+    /* 
+        a propriedade 'z-index' serve para trabalharmos as camadas do 
+        elementos filhos, similar a camadas no photosop.
+    */
+    z-index: 1;
+    transform: translateY(-50%);    
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+    
+}
+
+
+/* Links */
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 24px 0;
+}
+
+ul li a {     
+    /* 
+        a propriedade 'gap' é aplicavel quando utilizamos o 'display: flex'
+            ele coloca espaço entre os elementos flex.
+        a propriedade 'align-items: center' coloca todos os itens 
+            centralizados horizontalmente (eixo x).
+        a propredade 'justify-content: center' coloca todos os itens
+            centralizados verticalmente (eixo y).  
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    
+    /* 
+        -webkit- é um prefixo que alguns browsers vão utilizar 
+            para poder aplicar a propriedade. 
+    */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+/* ':hover' = pseudo-selector */
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;    
+
+    padding: 24px 0;
+
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background: var(--highlight-color)
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
