@@ -9,7 +9,7 @@
   <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#memo-licença">License</a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@ The DevLinks is a link aggregator to use as an online business card.
 
 You can preview the project layout through [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). It's necessary to have an account on [Figma](https://figma.com) to access it.
 
-## :memo: Licença
+## :memo: License
 
 This project is licensed under the MIT License.
 
