@@ -34,9 +34,9 @@ This project was developed using the following technologies:
 
 The DevLinks is a link aggregator to use as an online business card.
 
-- [Acesse o projeto finalizado, online](https://cristiangiehl1.github.io/Projeto-DevLinks/)
+- [View the final project online](https://cristiangiehl1.github.io/Projeto-DevLinks/)
 
-- [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
+- [Watch classes](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
 
 ## 🔖 Layout
 
